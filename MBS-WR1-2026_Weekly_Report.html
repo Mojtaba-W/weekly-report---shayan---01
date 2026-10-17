@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#087f68">
+<title>MBS Weekly Report 01 | BIOCHAIN</title>
+<style>
+:root{--green:#087f68;--deep:#064e46;--mint:#dff7ed;--pale:#f3fbf7;--ink:#173b36;--muted:#64817a;--line:#d9ebe3;--white:#fff;--gold:#d8a84e;--shadow:0 16px 45px rgba(8,79,65,.09)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:linear-gradient(180deg,#edf9f3 0,#f8fcfa 470px,#f6faf8 100%);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);line-height:1.6}
+a{color:var(--green);text-decoration:none}a:hover{text-decoration:underline}.wrap{width:min(1160px,calc(100% - 36px));margin:auto}
+.topbar{padding:22px 0;display:flex;justify-content:space-between;align-items:center;gap:14px}.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.04em}.logo{width:43px;height:43px;border-radius:14px;background:var(--green);color:white;display:grid;place-items:center;font-size:23px;box-shadow:0 8px 20px #087f6830}.brand small{display:block;color:var(--muted);font-weight:600;font-size:11px;letter-spacing:.13em}.pill{border:1px solid #b9dfd0;background:#ffffffa8;border-radius:999px;padding:8px 13px;color:var(--deep);font-size:12px;font-weight:750}
+.hero{position:relative;overflow:hidden;border-radius:30px;padding:clamp(28px,6vw,66px);background:radial-gradient(circle at 90% 20%,#2ebc8c55,transparent 32%),linear-gradient(120deg,#064e46,#087f68 62%,#159a79);color:white;box-shadow:var(--shadow)}
+.hero:after{content:"";position:absolute;width:320px;height:320px;border:1px solid #ffffff24;border-radius:50%;right:-85px;bottom:-180px;box-shadow:0 0 0 32px #ffffff0b,0 0 0 64px #ffffff08}
+.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.17em;font-weight:800;color:#aaf1d5}.hero h1{font-size:clamp(32px,5vw,57px);line-height:1.08;max-width:800px;margin:14px 0 14px;letter-spacing:-.04em}.hero p{max-width:690px;color:#e0f7ed;margin:0;font-size:clamp(15px,2vw,18px)}.hero-meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}.hero-meta span{font-size:12px;border:1px solid #ffffff35;background:#ffffff12;border-radius:999px;padding:7px 11px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:18px 0 32px}.stat{background:white;border:1px solid var(--line);border-radius:18px;padding:18px 20px;box-shadow:0 6px 18px #064e4608}.stat strong{font-size:25px;color:var(--green);display:block;line-height:1.2}.stat span{font-size:12px;color:var(--muted);font-weight:650}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin:34px 0 17px}.section-head h2{margin:0;font-size:clamp(23px,3vw,31px);letter-spacing:-.03em}.section-head p{margin:4px 0 0;color:var(--muted);font-size:14px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 20px}.filter{border:1px solid var(--line);background:#fff;color:var(--muted);padding:9px 13px;border-radius:999px;font-weight:750;font-size:12px;cursor:pointer}.filter.active,.filter:hover{background:var(--green);border-color:var(--green);color:#fff}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px}.post{background:white;border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:0 8px 26px #064e4607;transition:transform .2s,box-shadow .2s}.post:hover{transform:translateY(-3px);box-shadow:var(--shadow)}.post[hidden]{display:none}.post-top{padding:21px 22px 16px;display:flex;justify-content:space-between;align-items:start;gap:12px}.day{font-size:10px;font-weight:850;letter-spacing:.15em;color:var(--green);text-transform:uppercase}.code{font-size:11px;background:var(--mint);color:var(--deep);font-weight:850;padding:6px 9px;border-radius:8px;white-space:nowrap}.post h3{font-size:22px;line-height:1.22;margin:8px 0 6px;letter-spacing:-.025em}.subtitle{font-size:13px;color:var(--muted);margin:0}.topic{display:inline-flex;margin-top:13px;border:1px solid var(--line);border-radius:999px;padding:4px 9px;font-size:10px;font-weight:800;color:var(--muted)}.post-body{padding:0 22px 21px}.question{font-weight:750;color:var(--deep);margin:4px 0 10px}.summary{font-size:14px;color:#45645d;margin:0}.fa{font-size:14px;color:#45645d;border-top:1px solid var(--line);margin-top:15px;padding-top:14px;direction:rtl;text-align:right}.post-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:17px}.btn{display:inline-flex;justify-content:center;align-items:center;gap:7px;padding:10px 13px;border-radius:11px;border:1px solid var(--line);font-size:12px;font-weight:800;cursor:pointer;background:#fff;color:var(--deep)}.btn.primary{background:var(--green);color:white;border-color:var(--green)}.btn:hover{filter:brightness(.97);text-decoration:none}.details{display:none;padding:0 22px 22px}.details.open{display:block}.details-inner{border-radius:15px;background:var(--pale);border:1px solid var(--line);padding:16px;font-size:13px}.details-inner h4{margin:0 0 6px;color:var(--deep)}.details-inner p{margin:0 0 12px}.details-inner p:last-child{margin-bottom:0}.reference{border-left:3px solid #8ed8bb;padding-left:11px;color:var(--muted);font-size:12px}.weekly{margin:28px 0;background:linear-gradient(130deg,#fff,#edfaf3);border:1px solid var(--line);border-radius:24px;padding:clamp(22px,4vw,38px);display:grid;grid-template-columns:1.1fr .9fr;gap:28px}.weekly h2{font-size:28px;line-height:1.15;margin:7px 0 12px;letter-spacing:-.03em}.weekly p{font-size:14px;color:#45645d}.takeaways{display:grid;gap:10px;align-content:center}.takeaway{display:flex;gap:11px;align-items:start;background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px}.num{flex:0 0 28px;height:28px;display:grid;place-items:center;border-radius:9px;background:var(--mint);color:var(--green);font-size:12px;font-weight:900}.takeaway strong{display:block;font-size:13px}.takeaway span{display:block;color:var(--muted);font-size:12px}.discussion{background:#073f39;color:white;border-radius:22px;padding:24px 27px;margin:18px 0 28px;display:flex;justify-content:space-between;align-items:center;gap:20px}.discussion h3{margin:0 0 6px;font-size:20px}.discussion p{margin:0;color:#c7eee0;font-size:14px;max-width:730px}.discussion .btn{white-space:nowrap;background:#fff;border-color:#fff;color:var(--deep)}.sources{border:1px solid var(--line);background:#fff;border-radius:20px;padding:23px;margin:20px 0 30px}.sources h3{margin:0 0 10px}.sources ol{padding-left:20px;margin:0;color:#4f6c65;font-size:12px}.sources li{margin:7px 0}.note{font-size:11px!important;color:var(--muted)!important;margin-top:14px!important}.footer{border-top:1px solid var(--line);padding:25px 0 34px;display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;color:var(--muted);font-size:12px}.footer strong{color:var(--deep)}.footer .right{text-align:right}.leaf{color:#b3f1d8}
+@media(max-width:760px){.cards{grid-template-columns:1fr}.weekly{grid-template-columns:1fr}.stats{gap:8px}.stat{padding:14px}.stat strong{font-size:21px}.discussion{align-items:start;flex-direction:column}.footer .right{text-align:left}.hero{border-radius:22px}.topbar{align-items:start}}
+@media print{body{background:white}.topbar,.filters,.post-actions,.discussion .btn{display:none}.hero{box-shadow:none;print-color-adjust:exact}.post,.stat,.weekly,.sources{break-inside:avoid;box-shadow:none}.details{display:block!important}.cards{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="topbar">
+  <div class="brand"><div class="logo">✚</div><div>MEDICINE &amp; BIOMEDICINE<small>BIOCHAIN • SCIENCE WEEKLY</small></div></div>
+  <div class="pill">WEEKLY REPORT / 01</div>
+</header>
+<main>
+<section class="hero">
+  <div class="eyebrow">MBS Study Group · Weekly Scientific Report</div>
+  <h1>Understanding Human Health and Disease</h1>
+  <p>Five perspectives on modern medicine — exploring health beyond diagnosis, cellular senescence, the human microbiome, inflammation, and prevention.</p>
+  <div class="hero-meta"><span>✦ MBS-WR1-2026</span><span>Monday — Saturday</span><span>English + فارسی</span><span>Peer-reviewed references</span></div>
+</section>
+<section class="stats" aria-label="Report overview">
+  <div class="stat"><strong>05 + 01</strong><span>Science posts + weekly synthesis</span></div>
+  <div class="stat"><strong>5 themes</strong><span>Health · Cells · Microbiome · Immunity · Prevention</span></div>
+  <div class="stat"><strong>Evidence-led</strong><span>Research explained with context and limitations</span></div>
+</section>
+<div class="section-head"><div><h2>This week, in science</h2><p>Explore a topic, read the bilingual summary, or open the full report notes.</p></div></div>
+<nav class="filters" aria-label="Filter posts">
+  <button class="filter active" data-filter="all">All topics</button>
+  <button class="filter" data-filter="health">Health</button>
+  <button class="filter" data-filter="cells">Cells &amp; ageing</button>
+  <button class="filter" data-filter="microbiome">Microbiome</button>
+  <button class="filter" data-filter="immunity">Immunity</button>
+  <button class="filter" data-filter="prevention">Prevention</button>
+</nav>
+<section class="cards" id="posts">
+<article class="post" data-category="health">
+ <div class="post-top"><div><div class="day">Monday · Week 01</div><h3>What Does It Mean to Be Healthy?</h3><p class="subtitle">Beyond the absence of disease</p><span class="topic">Health &amp; human experience</span></div><span class="code">MBS-1-2026</span></div>
+ <div class="post-body"><p class="question">Can someone live with a chronic disease and still experience meaningful health?</p><p class="summary">Health includes more than test results: daily functioning, adaptation, quality of life, and social circumstances matter alongside clinical indicators.</p><p class="fa">سلامت فقط نبود بیماری نیست؛ شاخص‌های بالینی در کنار توانایی انجام فعالیت‌های روزمره، کیفیت زندگی، سازگاری و شرایط اجتماعی معنا پیدا می‌کنند.</p><div class="post-actions"><a class="btn primary" href="https://www.linkedin.com/feed/update/urn:li:activity:7515333715703742464" target="_blank" rel="noopener">Read on LinkedIn ↗</a><button class="btn toggle" aria-expanded="false">＋ Explore notes</button></div></div>
+ <div class="details"><div class="details-inner"><h4>Key idea</h4><p>The WHO’s classical definition describes health as physical, mental, and social well-being. Huber and colleagues proposed understanding health also as the ability to adapt and self-manage when facing challenges. This perspective complements rather than replaces diagnosis and clinical assessment.</p><h4>Discussion prompt</h4><p>How should healthcare outcomes measure patients’ everyday functioning alongside clinical indicators?</p><p class="reference">Huber, M., et al. (2011). “How should we define health?” <em>BMJ</em>, 343, d4163. DOI: 10.1136/bmj.d4163</p></div></div>
+</article>
+<article class="post" data-category="cells">
+ <div class="post-top"><div><div class="day">Tuesday · Week 01</div><h3>From Cells to Disease</h3><p class="subtitle">How molecular changes disrupt human health</p><span class="topic">Cellular senescence</span></div><span class="code">MBS-2-2026</span></div>
+ <div class="post-body"><p class="question">When can a cell that stops dividing become a problem?</p><p class="summary">Cellular senescence can protect against uncontrolled cell growth and support repair, but persistent senescent cells may release signals that impair tissue function.</p><p class="fa">پیری سلولی می‌تواند نقش محافظتی داشته باشد؛ اما تجمع سلول‌های پیر و ترشح عوامل التهابی از مسیر SASP ممکن است در اختلال عملکرد بافت‌ها نقش داشته باشد. درمان‌های هدف‌گیرنده هنوز در حال بررسی‌اند.</p><div class="post-actions"><a class="btn primary" href="https://www.linkedin.com/feed/update/urn:li:activity:7515767753253949440" target="_blank" rel="noopener">Read on LinkedIn ↗</a><button class="btn toggle" aria-expanded="false">＋ Explore notes</button></div></div>
+ <div class="details"><div class="details-inner"><h4>Key idea</h4><p>Senescent cells remain metabolically active while stably exiting the cell cycle. Their effects depend on context: senescence can help suppress tumors and support tissue repair, while persistent cells and their senescence-associated secretory phenotype (SASP) may contribute to inflammation and age-related dysfunction.</p><h4>Research in progress</h4><p>Senolytics are being investigated, but clinical benefits and long-term safety in humans remain under study.</p><p class="reference">Gorgoulis, V., et al. (2019). “Cellular Senescence: Defining a Path Forward.” <em>Cell</em>, 179(4), 813–827. DOI: 10.1016/j.cell.2019.10.005</p></div></div>
+</article>
+<article class="post" data-category="microbiome">
+ <div class="post-top"><div><div class="day">Wednesday · Week 01</div><h3>The Human Microbiome</h3><p class="subtitle">A hidden partner in health and disease</p><span class="topic">Microbiology &amp; human health</span></div><span class="code">MBS-3-2026</span></div>
+ <div class="post-body"><p class="question">If the microbiome changes during illness, did it cause the illness?</p><p class="summary">Microbial communities interact with immunity and metabolism, but an observed difference between patients and healthy people does not establish cause and effect.</p><p class="fa">میکروبیوم با ایمنی و سوخت‌وساز بدن تعامل دارد و تحت تأثیر بیماری، رژیم غذایی و دارو تغییر می‌کند؛ اما مشاهده تفاوت میکروبی به‌تنهایی رابطه علت و معلولی را ثابت نمی‌کند.</p><div class="post-actions"><a class="btn primary" href="https://www.linkedin.com/feed/update/urn:li:activity:7515902763562688512" target="_blank" rel="noopener">Read on LinkedIn ↗</a><button class="btn toggle" aria-expanded="false">＋ Explore notes</button></div></div>
+ <div class="details"><div class="details-inner"><h4>Key idea</h4><p>The Integrative Human Microbiome Project tracked microbial and human biological changes over time in conditions including inflammatory bowel disease, pregnancy, and prediabetes. Microbiome composition is dynamic, and findings need careful interpretation: disease, treatment, and lifestyle can also reshape microbial communities.</p><h4>Discussion prompt</h4><p>How can researchers distinguish microbes that drive disease from those that respond to it?</p><p class="reference">Integrative HMP Research Network Consortium (2019). “The Integrative Human Microbiome Project.” <em>Nature</em>, 569, 641–648. DOI: 10.1038/s41586-019-1238-8</p></div></div>
+</article>
+<article class="post" data-category="immunity">
+ <div class="post-top"><div><div class="day">Thursday · Week 01</div><h3>Inflammation: Defense or Threat?</h3><p class="subtitle">When the body’s defense becomes harmful</p><span class="topic">Immunology</span></div><span class="code">MBS-4-2026</span></div>
+ <div class="post-body"><p class="question">Why can a response that protects us also cause harm?</p><p class="summary">Acute inflammation helps fight infection and repair tissue. Persistent inflammatory signaling can disrupt tissue function, so restoring balance matters as much as activating defense.</p><p class="fa">التهاب حاد برای دفاع و ترمیم ضروری است؛ اما تداوم آن ممکن است به عملکرد بافت‌ها آسیب بزند. مهار گسترده التهاب نیز می‌تواند دفاع ایمنی و ترمیم را مختل کند.</p><div class="post-actions"><a class="btn primary" href="https://www.linkedin.com/feed/update/urn:li:activity:7516249535862640640" target="_blank" rel="noopener">Read on LinkedIn ↗</a><button class="btn toggle" aria-expanded="false">＋ Explore notes</button></div></div>
+ <div class="details"><div class="details-inner"><h4>Key idea</h4><p>Inflammatory pathways interact with metabolic and vascular processes and are associated with several chronic diseases. These relationships vary by tissue and condition; inflammation is not the sole cause of every disease. Research examines how responses are switched off and actively resolved, not only how to suppress them.</p><h4>Discussion prompt</h4><p>Could promoting inflammation resolution offer benefits over broadly suppressing immune responses?</p><p class="reference">Furman, D., et al. (2019). “Chronic inflammation in the etiology of disease across the life span.” <em>Nature Medicine</em>, 25, 1822–1832. DOI: 10.1038/s41591-019-0675-0</p></div></div>
+</article>
+<article class="post" data-category="prevention">
+ <div class="post-top"><div><div class="day">Friday · Week 01</div><h3>Lifestyle, Environment and Disease</h3><p class="subtitle">Can prevention change the future of medicine?</p><span class="topic">Preventive medicine</span></div><span class="code">MBS-5-2026</span></div>
+ <div class="post-body"><p class="question">Is prevention only a matter of individual choice?</p><p class="summary">Diet, physical activity, pollution exposure, and healthcare access shape health risks. Effective prevention combines personal support with healthier environments and public-health measures.</p><p class="fa">پیشگیری فقط به انتخاب فردی وابسته نیست؛ قیمت غذا، آلودگی، طراحی محیط شهری و دسترسی به خدمات سلامت نیز اثرگذارند. پیشگیری مؤثر به مراقبت بالینی و سیاست‌گذاری عمومی نیاز دارد.</p><div class="post-actions"><a class="btn primary" href="https://www.linkedin.com/feed/update/urn:li:activity:7516875702084857856" target="_blank" rel="noopener">Read on LinkedIn ↗</a><button class="btn toggle" aria-expanded="false">＋ Explore notes</button></div></div>
+ <div class="details"><div class="details-inner"><h4>Key idea</h4><p>A global analysis using Global Burden of Disease estimates associated dietary risks with substantial population-level mortality and disability. These estimates do not predict an individual’s outcome or prove that changing one food will prevent disease. Prevention also depends on the conditions that make healthier choices possible.</p><h4>Discussion prompt</h4><p>Should healthcare systems invest more in reducing environmental risks as well as treating disease?</p><p class="reference">GBD 2017 Diet Collaborators (2019). “Health effects of dietary risks in 195 countries, 1990–2017.” <em>The Lancet</em>, 393, 1958–1972. DOI: 10.1016/S0140-6736(19)30041-8</p></div></div>
+</article>
+<article class="post" data-category="health cells microbiome immunity prevention">
+ <div class="post-top"><div><div class="day">Saturday · Weekly synthesis</div><h3>Understanding Human Health and Disease</h3><p class="subtitle">Five perspectives, one connected system</p><span class="topic">Weekly report</span></div><span class="code">MBS-WR1-2026</span></div>
+ <div class="post-body"><p class="question">What connects cellular stress, gut microbes, inflammation, diet, and the meaning of health?</p><p class="summary">Health emerges from interactions across molecular, cellular, microbial, immune, behavioral, and social levels. No single diagnosis or biomarker captures the whole picture.</p><p class="fa">سلامت حاصل تعامل فرایندهای مولکولی، سلولی، میکروبی، ایمنی، رفتاری و اجتماعی است. پزشکی دقیق‌تر باید این سطوح را به هم پیوند دهد، بدون آن‌که تجربه و شرایط زندگی فرد را نادیده بگیرد.</p><div class="post-actions"><a class="btn primary" href="https://www.linkedin.com/feed/update/urn:li:activity:7516984686976499712" target="_blank" rel="noopener">Read weekly post ↗</a><button class="btn toggle" aria-expanded="false">＋ Explore synthesis</button></div></div>
+ <div class="details"><div class="details-inner"><h4>The connecting idea</h4><p>Clinical measures remain essential, but they gain meaning when considered alongside physiological function, environmental exposure, daily life, and social context. Cellular senescence, microbiome shifts, inflammation, and prevention are related perspectives—not interchangeable explanations for every disease.</p><h4>Discussion prompt</h4><p>How can healthcare integrate molecular evidence, prevention, and patients’ lived experience without oversimplifying disease?</p><p class="reference">López-Otín, C., et al. (2023). “Hallmarks of Health.” <em>Cell</em>, 186(1), 33–63. DOI: 10.1016/j.cell.2022.11.001</p></div></div>
+</article>
+</section>
+<section class="weekly">
+ <div><div class="eyebrow" style="color:var(--green)">Weekly synthesis</div><h2>Health is a connected story.</h2><p>This week’s posts move from the meaning of health to the cellular, microbial, immune, and environmental processes that influence it. The shared lesson is not that one factor explains disease, but that health emerges from interacting systems.</p><p>Good science communication keeps both the promise and the limitations of research visible: association is not causation, preclinical promise is not an approved treatment, and population estimates do not determine an individual outcome.</p></div>
+ <div class="takeaways">
+  <div class="takeaway"><div class="num">01</div><div><strong>Look beyond a single metric</strong><span>Clinical indicators and lived experience complement one another.</span></div></div>
+  <div class="takeaway"><div class="num">02</div><div><strong>Context changes biology</strong><span>Cells, microbes, and immune responses behave within systems.</span></div></div>
+  <div class="takeaway"><div class="num">03</div><div><strong>Prevention is shared work</strong><span>Individual care and supportive environments both matter.</span></div></div>
+ </div>
+</section>
+<section class="discussion">
+ <div><h3>Join the scientific discussion</h3><p>Which level of health research deserves more attention: molecular mechanisms, the microbiome, immune regulation, prevention, or the social conditions that shape health?</p></div>
+ <a class="btn" href="https://www.linkedin.com/feed/update/urn:li:activity:7516984686976499712" target="_blank" rel="noopener">Discuss on LinkedIn ↗</a>
+</section>
+<section class="sources">
+ <h3>Scientific references</h3>
+ <ol>
+  <li>Huber, M., et al. (2011). How should we define health? <em>BMJ</em>, 343, d4163. <a href="https://doi.org/10.1136/bmj.d4163" target="_blank" rel="noopener">doi:10.1136/bmj.d4163</a></li>
+  <li>Gorgoulis, V., et al. (2019). Cellular Senescence: Defining a Path Forward. <em>Cell</em>, 179(4), 813–827. <a href="https://doi.org/10.1016/j.cell.2019.10.005" target="_blank" rel="noopener">doi:10.1016/j.cell.2019.10.005</a></li>
+  <li>Integrative HMP Research Network Consortium (2019). The Integrative Human Microbiome Project. <em>Nature</em>, 569, 641–648. <a href="https://doi.org/10.1038/s41586-019-1238-8" target="_blank" rel="noopener">doi:10.1038/s41586-019-1238-8</a></li>
+  <li>Furman, D., et al. (2019). Chronic inflammation in the etiology of disease across the life span. <em>Nature Medicine</em>, 25, 1822–1832. <a href="https://doi.org/10.1038/s41591-019-0675-0" target="_blank" rel="noopener">doi:10.1038/s41591-019-0675-0</a></li>
+  <li>GBD 2017 Diet Collaborators (2019). Health effects of dietary risks in 195 countries, 1990–2017. <em>The Lancet</em>, 393, 1958–1972. <a href="https://doi.org/10.1016/S0140-6736(19)30041-8" target="_blank" rel="noopener">doi:10.1016/S0140-6736(19)30041-8</a></li>
+  <li>López-Otín, C., et al. (2023). Hallmarks of Health. <em>Cell</em>, 186(1), 33–63. <a href="https://doi.org/10.1016/j.cell.2022.11.001" target="_blank" rel="noopener">doi:10.1016/j.cell.2022.11.001</a></li>
+ </ol>
+ <p class="note">Editorial note: Evidence-based explainers, not breaking 2026 news. References are reproduced from the supplied content; verify bibliographic details and newer findings before publication. This page is educational and does not provide personal medical advice.</p>
+</section>
+</main>
+<footer class="footer">
+ <div><strong>MBS Study Group</strong><br>Medicine &amp; Biomedical Sciences · Editorial Board<br><span>Content Preparation &amp; Coordination: Shayan Beiroti</span><br><span>Scientific Review &amp; Supervision: Dr. Mehdi Zarabi</span></div>
+ <div class="right"><strong>BIOCHAIN</strong><br>Zarabi Bioinnovation Ecosystem<br><span>Learning from biology. Connecting science and life.</span><br><a href="https://mojtaba-w.github.io/biochain-weekly-report-02/" target="_blank" rel="noopener">Design reference: BIOCHAIN Weekly Report — Week 02 ↗</a></div>
+</footer>
+</div>
+<script>
+const filters=[...document.querySelectorAll('.filter')];
+const posts=[...document.querySelectorAll('.post')];
+filters.forEach(btn=>btn.addEventListener('click',()=>{
+  filters.forEach(f=>f.classList.toggle('active',f===btn));
+  const chosen=btn.dataset.filter;
+  posts.forEach(post=>{
+    const cats=post.dataset.category.split(' ');
+    post.hidden=chosen!=='all'&&!cats.includes(chosen);
+  });
+}));
+document.querySelectorAll('.toggle').forEach(btn=>btn.addEventListener('click',()=>{
+  const post=btn.closest('.post');
+  const panel=post.querySelector('.details');
+  const open=panel.classList.toggle('open');
+  btn.setAttribute('aria-expanded',String(open));
+  btn.textContent=open?'− Hide notes':'＋ Explore notes';
+}));
+</script>
+</body>
+</html>
